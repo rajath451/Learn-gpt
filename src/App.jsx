@@ -7,14 +7,19 @@ import { Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className='dark:bg-gradient-to-b from-[#242124] to-[#000000] dark:text-white'>
-      <div className='flex h-screen w-screen'>
+    <div className="h-screen w-screen overflow-hidden bg-white">
+      <div className="flex h-full">
+        {/* Sidebar */}
         <Sidebar />
-        <Routes>
-          <Route path='/' element={<ChatBox />} />
-          <Route path='/credits' element={<Credits />} />
-          <Route path='/community' element={<Community />} />
-        </Routes>
+
+        {/* Main Content Area */}
+        <div className="flex-1 overflow-auto max-md:w-full">
+          <Routes>
+            <Route path="/" element={<ChatBox />} />
+            <Route path="/credits" element={<Credits />} />
+            <Route path="/community" element={<Community />} />
+          </Routes>
+        </div>
       </div>
     </div>
   )

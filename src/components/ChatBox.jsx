@@ -1,8 +1,11 @@
 import React from 'react'
 
-export const chatBox = () => {
+const ChatBox = () => {
   return (
-    <div>chatBox</div>
+    <div className="flex flex-col h-screen w-full bg-white">
+      {/* Your content goes here */}
+    </div>
   )
 }
-export default chatBox
+
+export default ChatBox
